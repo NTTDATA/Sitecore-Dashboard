@@ -8,6 +8,7 @@ Sitecore app that aggregates real-time data about your site into a customizable 
 
 - .NET 4.0+
 - IIS 7+
+- Json.NET 4.5 (contained in Sitecore package and will overwrite existing version of Newtonsoft.Json.dll)
 - Tested on Sitecore 6.4.1, 6.5, and 6.6
 
 
@@ -23,20 +24,6 @@ Sitecore app that aggregates real-time data about your site into a customizable 
           <bindingRedirect oldVersion="1.0.0.0-3.6.0.0" newVersion="4.5.0.0" />
         </dependentAssembly>
 
-3. Add to Global.asax:
-
-        <%@ Import Namespace="System.Web.Http" %>
-        <%@ Import Namespace="System.Web.Routing" %>
-        ...
-          public void Application_Start() {
-            RouteTable.Routes.MapHttpRoute(
-              name: "Widgets API",
-              routeTemplate: "api/{controller}/{id}",
-              defaults: new { controller = "widgets" }
-            );
-            RouteTable.Routes.MapHubs();
-          }
-        ...
   
 **Contact Info:**  
 <valerie.concepcion@nttdata.com>  

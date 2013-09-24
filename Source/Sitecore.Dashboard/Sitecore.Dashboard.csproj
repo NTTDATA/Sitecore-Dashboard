@@ -138,6 +138,7 @@
     <Compile Include="Models\JobViewer.cs" />
     <Compile Include="Models\LoggedIn.cs" />
     <Compile Include="Pipelines\HttpRequestBegin\TransferRoutedRequest.cs" />
+    <Compile Include="Pipelines\Initialize\InitializeRoutes.cs" />
     <Compile Include="Pipelines\Jobs\JobRunner.cs" />
     <Compile Include="Pipelines\LoggedIn\RaiseLoggedInEvent.cs" />
     <Compile Include="Pipelines\Logout\RaiseLogoutEvent.cs" />
